@@ -1,0 +1,30 @@
+#Lambda Expression
+#These are for 1) only using once 2) anonymous functions(no name needed because not stored)
+My_list = [1,2,3]
+print(list((lambda item: item*2, My_list)))
+
+
+
+#Returning the squared value of the iterable 
+list1 = [5,4,3]
+
+print(list(map(lambda item: item**2, list1)))
+
+
+
+#list sorting
+#This code sorts only by first value in tuple
+list2 = [(0,2), (4,3), (9,9), (10,-1)]
+
+list2.sort()
+
+print(list2)
+
+
+#Sorting by second value in tuple
+#Lambda(one time function) used to set the key
+list2 = [(0,2), (4,3), (9,9), (10,-1)]
+
+list2.sort(key=lambda x: x[1])
+
+print(list2)

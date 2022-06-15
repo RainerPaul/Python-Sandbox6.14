@@ -1,0 +1,6 @@
+#parameters allow for arguments
+def say_hello(name, emoji):
+  print('hello', (name), (emoji))
+
+#arguemnt part      
+say_hello('Rainer', 'Smiley Face')

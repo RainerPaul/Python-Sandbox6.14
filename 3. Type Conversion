@@ -1,0 +1,5 @@
+birthyear = input('what year were you born?')
+
+age = 2022 - int(birthyear)
+
+print('Your age is ' + str(age))

@@ -1,0 +1,36 @@
+# Example 1
+is_old = None
+is_licensed = 'Hello'
+
+if is_old and is_licensed:
+  print('you are able to drive')
+elif is_old:
+  print('you can now take your driving test')
+elif is_licensed:
+  print('you must be older')
+else: 
+  print('you must be older and/or take your driving test')
+
+# Example 2
+is_magician = False
+is_expert = False
+
+if is_magician and is_expert: 
+  print('you are master magician')
+elif is_magician or is_expert:
+  print('Almost There')
+else:
+  print('beginner')
+
+# Making Interactive
+is_magician = input('Are you a Magician?(True/False)')
+is_expert = input('Are you a Expert?(True/False)')
+
+if is_expert == "True" and is_magician == "True":
+  print('You are a Master Magician')
+elif is_expert == "True" and not is_magician == "True":
+  print('Must be expert to be Master Magician')
+elif is_magician == "True" and not is_expert == "True":
+  print('Must to Magician to be Master Magician')
+else:
+  print('beginner')

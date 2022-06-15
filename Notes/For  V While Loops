@@ -1,0 +1,67 @@
+# w/ list
+for item in ['ZTM', 'Python', 2]:
+  print(item)
+  print(item)
+  
+# w/ tuple 
+for item in (1,4,3,7,8):
+  print(item)
+print(item) #list ended, so 8 was printed again
+
+# for multiple variables
+for item1 in ['ZTM', 'Python']:
+  for item2 in (1,3,2,4):
+    print(item1, item2)
+
+# variables can also come after the 'in'
+user = {
+  'Firstname': 'Rainer',
+  'lastname': 'Paulus'
+}
+for item in user.items():
+  print(item)
+#use .items() to return key/value pair in tuple
+
+for item in user.values():
+  print(item)
+#use .values() to return values
+
+for item in user.keys():
+  print(item)
+#use .keys to return keys
+
+for item in user.items():
+  key, value = item;
+  print(key, value)
+#to unpack the tuple
+#shorthand - replace 'item' with 'key, value'
+
+# while loops can continually run, need to use a 'break' 
+# statement
+i = 0 
+while i < 50:
+  print(i)
+  i = i + 1 
+# The i = i + 1 is included in the loop and will break the # loop when i hits 50
+break
+else:
+  print('all the work is done')
+# use else only if there is a break and the loop doesn't finish before break
+
+#For V While e.g.
+item = 1
+for item in [1,2,3]:
+  print(item)
+
+i = 0
+while i < len([1,2,3]):
+  print(i)
+  i = i + 1
+
+while True:
+  input('say something:')
+
+while True:
+  response = input('say something:')
+  if (response == 'bye'):
+    break

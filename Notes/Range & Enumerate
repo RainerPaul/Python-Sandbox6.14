@@ -1,0 +1,11 @@
+# Range Examples
+for _ in range(2):
+  print(_)
+
+for item in range(0, 10, 2):
+  print(list(range(10)))
+
+# Enumerate Examples
+# Enumerate shows the index number
+for i, char in enumerate('hello'):
+  print(i, char)

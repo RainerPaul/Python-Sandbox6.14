@@ -1,0 +1,49 @@
+#list, set, dictionary
+#there is a better way to do the following code
+list1 = []
+
+for char in 'Hello':
+  list1.append(char)
+
+print(list1)
+
+
+#List Comprehension 
+#Function: Variable = [param for param in iterable]
+list2 = [char for char in "hello"]
+print(list2)
+
+list3 = [num*2 for num in range(0,100)]
+
+print(list3)
+
+list4 = [num*2 for num in range(0,100) if num % 2 == 0]
+
+
+#Set Comprehension
+#change [] to {} to convert list to a set
+
+
+
+#Dictionary Comprehension
+simple_dict = {
+  'a':1,
+  'b':2
+}
+dict1 = {k:v**2 for k,v in simple_dict.items() if v%2==0}
+
+print(dict1)
+
+dict2 = {num:num*2 for num in [1,2,3] }
+#adding num:num*2 would use initial list as key with output of num*2 as value
+
+print(dict2)
+
+
+
+#creating a list that only shows that values that have a duplicate
+some_list = ['a', 'b', 'c', 'd', 'c', 'm', 'm']
+
+duplicates = list(set([value for value in some_list if some_list.count(value)>1]))
+
+print(duplicates)

@@ -1,0 +1,90 @@
+#Inheretence 
+#.super()
+class Car():
+  def __init__(self, model, make, year, trim, engine, drive, trans):
+    self.model = model
+    self.make = make
+    self.year = year
+    self.trim = trim
+    self.engine = engine
+    self.drive = drive
+    self.trans = trans
+
+class ImportCar(Car):
+  def __init__(self, model, make, year, trim, engine, drive, trans, is_import):
+    super().__init__(model, make, year, trim, engine, drive, trans)
+    self.is_import = is_import
+
+Car1 = Car('Maverick', 'Ford', 2022, 'XL', '2.5L Hybrid', 'FWD', 'CVT')
+Car2 = ImportCar('Skyline', 'Nissan', 2000, 'R34', '2.6L V6TT', 'AWD', 'Manual', True)
+
+print(Car2.__dict__)
+print(Car1.model, ',',Car1.engine)
+
+
+
+#EXERCISE 
+
+#Given the below class:
+class Cat:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+
+# 1 Instantiate the Cat object with 3 cats
+cat1 = Cat('Roger', 3)
+cat2 = Cat('Bill', 2)
+cat3 = Cat('Goofy', 9)
+
+
+# 2 Create a function that finds the oldest cat
+def oldest_cat():
+  cat_dict = {
+    cat1.age: cat1.name,
+    cat2.age: cat2.name,
+    cat3.age: cat3.name
+  }
+  max_age = max(cat1.age, cat2.age, cat3.age)
+  for age, name in cat_dict.items():
+    if max_age == age:
+      return (f'The oldest cat {name} is {age} years old')
+
+# 3 Print out: "The oldest cat is x years old.". x will be the oldest cat age by using the function in #2
+print(oldest_cat())
+
+
+
+# OOP Continued
+# Static Method
+class PlayerCharacter:
+  membership = True
+  def __init__(self, name, age):
+    self.name = name #attributes
+    self.age = age
+
+  @staticmethod
+  def adding_things2(num1, num2):
+    return num1 + num2
+  
+print(PlayerCharacter.adding_things2(1,3))
+
+
+
+#MRO Resolution Order
+class A:
+  num = 10
+
+class B(A):
+  pass
+
+class C(A):
+  num = 1
+
+class D(B, C):
+  pass
+
+print(D.num)
+
+#Function will return 1
+#If, Class C is pass, Fun will return 10

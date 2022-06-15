@@ -1,0 +1,25 @@
+#python automaticall converts to same type
+
+print(True == 1)
+# 1 is Truthy so it satsifies the boolean
+
+print('' == 1)
+# empty string is falsy and does not equal the Truthy 1, what if it is it '1' == 1
+print('1' == 1)
+#false because of different data types
+
+print([] == 1)
+#empty array is falsey and does not equal the truthy 1
+
+print(10 == 10.0)
+#both int
+
+print([] == [])
+#both falsey
+
+print(True is 1)
+print('' is 1)
+print([] is 1)
+print(10 is 10.0)
+print([] is [])
+#is checks if location is memory is the same

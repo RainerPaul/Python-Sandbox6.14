@@ -1,0 +1,21 @@
+# Finding Duplicates using sets
+
+my_list = ['a','b','c','b','d','d','m','n','n']
+
+duplicates = [char for char in my_list if my_list.count(char) > 1]
+
+unique_duplicates = list(set(duplicates))
+
+print(unique_duplicates)
+
+# Finding Duplicates using Loops 
+
+my_list = ['a','b','c','b','d','d','m','n','n']
+
+duplicates = []
+for value in my_list:
+  if my_list.count(value) > 1:
+    if value not in duplicates:
+      duplicates.append(value)
+
+print(duplicates)

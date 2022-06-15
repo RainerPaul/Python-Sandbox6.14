@@ -1,0 +1,73 @@
+#Function Practice
+def user_function(greeting):
+  if greeting == ("USA" or "United States"):
+    print("Hello, US Citizen")
+  else:
+    print("Hello, Foreigner")
+
+greeting = input("Which country are you in?")
+
+print(user_function(greeting))
+
+
+
+#map, filter, zip, reduce functions
+#initial example
+def multiplyby2(li):
+  new_list = []
+  for item in li:
+    new_list.append(item*2)
+  print(new_list)
+
+multiplyby2([1,2,3])
+
+
+
+#MAP returns object location in memory
+#list is used because the object is not iterable 
+my_list = [1,2,3]
+def multiplyby2(item):
+  return (item*2)
+
+print(list(map(multiplyby2(my_list)))
+print(my_list) #data outside of function is not affected
+
+
+#filter function
+#this functions runs the items of the iterable through the #function to determine if to return them
+my_list = [1,2,3]
+def multiplyby2(item):
+  return (item*2)
+
+def check_odd(item):
+  return item % 2 != 0 
+      
+print(list(filter(check_odd, my_list)))
+#output: only 1, 3
+
+
+
+#ZIP Function
+#It zips the sets together based upon place in data set
+my_list = [1,2,3]
+your_list = [10,20,30]
+their_list = (11,22,33)
+      
+print(list(zip(my_list, your_list, their_list)))
+
+
+#REDUCE
+from functools import reduce
+my_list = [1,2,3]
+
+def multiplyby2(item):
+  return (item*2)
+
+def check_odd(item):
+  return item % 2 != 0 
+
+def accumulator(acc, item):
+  print(acc, item)
+  return acc + item
+
+print(reduce(accumulator, my_list, 0))

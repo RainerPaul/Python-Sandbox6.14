@@ -1,0 +1,10 @@
+is_friend = True
+is_user = False
+
+if is_friend or is_user :
+  print("BFF") 
+
+# "is_user" would not be checked in this case since the condition is already met with "is_friend"
+
+#another example
+print(1 < 2 > 3 < 4) 

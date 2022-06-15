@@ -1,0 +1,41 @@
+# def tells python that a function is going to be defined
+def say_hello():
+  print('hello')
+
+say_hello()
+
+# functions
+list()
+print()
+max()
+min()
+input()
+
+def function_example():
+  pass
+
+# methods
+
+'hello'.capialize()
+
+#*args 
+#**kwargs
+def super_func(name, *args, i='hi', **kwargs):
+  total = 0
+  for items in kwargs.values():
+      total += items
+  return sum(args) + total 
+
+print(super_func('Andy', 1,2,3,4,5, num1=5, num2=10))
+
+#Rule: params, *args, default params, **kwargs
+
+#Exercise
+def highest_even(li):
+  evens = []
+  for item in li:
+    if item % 2 == 0:
+      evens.append(item)
+  return max(evens)
+
+print(highest_even([10,2,3,4,8,11])) 
